@@ -1,20 +1,26 @@
 @use "./abstracts/variables" as variables;
 
+// Content layout
 .app {
+  min-width: 20rem;
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden; // Development
+  min-height: 20rem;
+  height: max-content;
 }
 
+// Container header and main
 .header-main__container {
   display: flex;
   flex-direction: column;
   gap: 2.375rem;
+  width: inherit;
+  height: inherit;
   padding-top: 1rem;
   padding-bottom: 5rem;
   background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
 }
 
+// Link styles
 .link {
   padding: 0.95rem 2rem;
   border-radius: 1.9375rem;
@@ -22,6 +28,7 @@
   font-weight: 700;
 }
 
+// Header styles
 .header {
   display: flex;
   justify-content: center;
@@ -42,6 +49,7 @@
   }
 }
 
+// main styles
 .main {
   display: flex;
   flex-direction: column;
@@ -51,6 +59,7 @@
   }
 }
 
+// Main introduction styles
 .main__introduction {
   display: flex;
   flex-direction: column;
@@ -79,6 +88,7 @@
   }
 }
 
+// Section courses
 .section__courses {
   display: flex;
   flex-direction: column;
@@ -98,6 +108,7 @@
   }
 }
 
+// Courses list styles
 .courses__data-course {
   position: relative;
   display: flex;
@@ -113,11 +124,14 @@
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
-    background-image: url("../assets/images/svg/icon-animation.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .data-course__icon:last-of-type() {
+    background-image: url("../assets/images/svg/icon-business.svg");
+  }
+
   .data-course__container-texts {
     display: flex;
     flex-direction: column;
@@ -140,11 +154,12 @@
   }
 }
 
+// Footer styles
 .footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 2.25rem 1rem;
+  padding: 2.25rem 0rem;
   background-color: variables.$secondary-color;
   .footer__container-data {
     display: flex;
