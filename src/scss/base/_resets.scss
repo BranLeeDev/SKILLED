@@ -1,4 +1,4 @@
-$background-body: #ffffff;
+@use "../abstracts/variables" as variables;
 
 @font-face {
   font-family: "Plus Jakarta Sans";
@@ -12,6 +12,12 @@ $background-body: #ffffff;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+picture {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
 }
 
 img {
@@ -28,6 +34,6 @@ ul {
 }
 
 body {
-  font-family: "Plus Jakarta Sans";
-  background-color: $background-body;
+  font-family: variables.$font-jakarta;
+  background-color: variables.$primary-color;
 }

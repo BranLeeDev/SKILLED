@@ -12,105 +12,117 @@
   </head>
   <body>
     <div class="app">
-      <header class="header">
-        <div class="header__container-nav">
-          <h1 class="header__title">skilled</h1>
-          <a href="/" class="header__link">Get Started</a>
-        </div>
-      </header>
-      <main class="main">
-        <section class="section main__introduction">
-          <h2 class="introduction__title">Maximize skill, minimize budget</h2>
-          <p class="introduction__description">
-            Our modern courses across a range of in-demand skills will give you
-            the knowledge you need to live the life you want.
-          </p>
-          <a href="/" class="introduction__link">Get Started</a>
-          <figure class="introduction__figure">
-            <picture class="introduction__picture">
-              <source
-                srcset="/src/assets/images/webp/image-hero-desktop@2x.webp"
-                media="screen and (width >= 1000px)"
-                class="introduction__source"
-              />
-              <source
-                srcset="/src/assets/images/webp/image-hero-tablet@2x.webp"
-                media="screen and (width >= 600px)"
-                class="introduction__source"
-              />
-              <img
-                src="/src/assets/images/webp/image-hero-mobile@2x.webp"
-                alt="Reference image of the student while studying, also showing the numbers of members and hours of the courses."
-                class="introduction__img"
-              />
-            </picture>
-          </figure>
-        </section>
-        <section class="section section__courses">
-          <h2 class="courses__title">Check out our most popular courses!</h2>
-          <ul class="courses__list">
-            <li class="courses__item">
-              <article class="courses__data-course">
-                <span class="data-course__icon"></span>
-                <h3 class="data-course__title">Animation</h3>
-                <p class="data-course__description">
-                  Learn the latest animation techniques to create stunning
-                  motion design and captivate your audience.
-                </p>
-                <a href="/" class="data-course__link">Get Started</a>
-              </article>
-            </li>
-            <li class="courses__item">
-              <article class="courses__data-course">
-                <span class="data-course__icon"></span>
-                <h3 class="data-course__title">Design</h3>
-                <p class="data-course__description">
-                  Create beautiful, usable interfaces to help shape the future
-                  of how the web looks.
-                </p>
-                <a href="/" class="data-course__link">Get Started</a>
-              </article>
-            </li>
-            <li class="courses__item">
-              <article class="courses__data-course">
-                <span class="data-course__icon"></span>
-                <h3 class="data-course__title">Photography</h3>
-                <p class="data-course__description">
-                  Explore critical fundamentals like lighting, composition, and
-                  focus to capture exceptional photos.
-                </p>
-                <a href="/" class="data-course__link">Get Started</a>
-              </article>
-            </li>
-            <li class="courses__item">
-              <article class="courses__data-course">
-                <span class="data-course__icon"></span>
-                <h3 class="data-course__title">Crypto</h3>
-                <p class="data-course__description">
-                  All you need to know to get started investing in crypto. Go
-                  from beginner to advanced with this 54 hour course.
-                </p>
-                <a href="/" class="data-course__link">Get Started</a>
-              </article>
-            </li>
-            <li class="courses__item">
-              <article class="courses__data-course">
-                <span class="data-course__icon"></span>
-                <h3 class="data-course__title">Business</h3>
-                <p class="data-course__description">
-                  A step-by-step playbook to help you start, scale, and sustain
-                  your business without outside investment.
-                </p>
-                <a href="/" class="data-course__link">Get Started</a>
-              </article>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <div class="header-main__container">
+        <header class="header">
+          <div class="header__container-nav">
+            <h1 class="header__title">skilled</h1>
+            <a href="/" class="header__link link">Get Started</a>
+          </div>
+        </header>
+        <main class="main">
+          <section class="section main__introduction">
+            <h2 class="introduction__title">Maximize skill, minimize budget</h2>
+            <p class="introduction__description">
+              Our modern courses across a range of in-demand skills will give
+              you the knowledge you need to live the life you want.
+            </p>
+            <a href="/" class="introduction__link link">Get Started</a>
+            <figure class="introduction__figure">
+              <picture class="introduction__picture">
+                <source
+                  srcset="/src/assets/images/webp/image-hero-desktop@2x.webp"
+                  media="screen and (width >= 1000px)"
+                  class="introduction__source"
+                />
+                <source
+                  srcset="/src/assets/images/webp/image-hero-tablet@2x.webp"
+                  media="screen and (width >= 600px)"
+                  class="introduction__source"
+                />
+                <img
+                  src="/src/assets/images/webp/image-hero-mobile@2x.webp"
+                  alt="Reference image of the student while studying, also showing the numbers of members and hours of the courses."
+                  class="introduction__img"
+                />
+              </picture>
+            </figure>
+          </section>
+          <section class="section section__courses">
+            <h2 class="courses__title">Check out our most popular courses!</h2>
+            <ul class="courses__list">
+              <li class="courses__item">
+                <article class="courses__data-course">
+                  <span class="data-course__icon"></span>
+                  <div class="data-course__container-texts">
+                    <h3 class="data-course__title">Animation</h3>
+                    <p class="data-course__description">
+                      Learn the latest animation techniques to create stunning
+                      motion design and captivate your audience.
+                    </p>
+                  </div>
+                  <a href="/" class="data-course__link">Get Started</a>
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses__data-course">
+                  <span class="data-course__icon"></span>
+                  <div class="data-course__container-texts">
+                    <h3 class="data-course__title">Design</h3>
+                    <p class="data-course__description">
+                      Create beautiful, usable interfaces to help shape the
+                      future of how the web looks.
+                    </p>
+                  </div>
+                  <a href="/" class="data-course__link">Get Started</a>
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses__data-course">
+                  <span class="data-course__icon"></span>
+                  <div class="data-course__container-texts">
+                    <h3 class="data-course__title">Photography</h3>
+                    <p class="data-course__description">
+                      Explore critical fundamentals like lighting, composition,
+                      and focus to capture exceptional photos.
+                    </p>
+                  </div>
+                  <a href="/" class="data-course__link">Get Started</a>
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses__data-course">
+                  <span class="data-course__icon"></span>
+                  <div class="data-course__container-texts">
+                    <h3 class="data-course__title">Crypto</h3>
+                    <p class="data-course__description">
+                      All you need to know to get started investing in crypto.
+                      Go from beginner to advanced with this 54 hour course.
+                    </p>
+                  </div>
+                  <a href="/" class="data-course__link">Get Started</a>
+                </article>
+              </li>
+              <li class="courses__item">
+                <article class="courses__data-course">
+                  <span class="data-course__icon"></span>
+                  <div class="data-course__container-texts">
+                    <h3 class="data-course__title">Business</h3>
+                    <p class="data-course__description">
+                      A step-by-step playbook to help you start, scale, and
+                      sustain your business without outside investment.
+                    </p>
+                  </div>
+                  <a href="/" class="data-course__link link">Get Started</a>
+                </article>
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
       <footer class="footer">
-        <div>
-          <p class="footer__link">skilled</p>
-          <a href="/" class="footer__link">Get Started</a>
+        <div class="footer__container-data">
+          <p class="footer__paragraph">skilled</p>
+          <a href="/" class="link footer__link">Get Started</a>
         </div>
       </footer>
     </div>
