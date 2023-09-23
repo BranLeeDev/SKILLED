@@ -1,0 +1,14 @@
+@mixin box-flex($direction, $align-items, $justify-content, $width) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  width: $width;
+}
+
+@mixin typography($font-size, $font-weight, $line-height, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+}

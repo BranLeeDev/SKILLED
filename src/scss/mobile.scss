@@ -1,4 +1,5 @@
 @use "./abstracts/variables" as variables;
+@use "./abstracts/mixins" as mixins;
 
 // Content layout
 .app {
@@ -33,14 +34,14 @@
   display: flex;
   justify-content: center;
   .header__container-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+    @include mixins.box-flex(row, center, space-between, 90%);
     .header__title {
-      color: variables.$secondary-color;
-      font-size: 1.75rem;
-      font-weight: 800;
+      @include mixins.typography(
+        1.75rem,
+        800,
+        normal,
+        variables.$secondary-color
+      );
     }
     .header__link {
       background-color: variables.$secondary-color;
@@ -51,30 +52,20 @@
 
 // main styles
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include mixins.box-flex(column, center, flex-start, 100%);
   .section {
-    width: 90%;
+    @include mixins.box-flex(column, flex-start, flex-start, 90%);
   }
 }
 
 // Main introduction styles
 .main__introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 1.625rem;
   .introduction__title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: variables.$secondary-color;
+    @include mixins.typography(2.5rem, 800, normal, variables.$secondary-color);
   }
   .introduction__description {
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.625rem;
-    color: variables.$paragraph-color;
+    @include mixins.typography(1rem, 500, 1.625rem, variables.$paragraph-color);
   }
   .introduction__link {
     position: relative;
@@ -90,16 +81,12 @@
 
 // Section courses
 .section__courses {
-  display: flex;
-  flex-direction: column;
   gap: 3rem;
   .courses__title {
     padding: 1.5rem 1.8125rem 2rem 1.75rem;
     border-radius: 0.625rem;
     background: variables.$first-linear-gradient;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: variables.$primary-color;
+    @include mixins.typography(1.5rem, 800, 2rem, variables.$primary-color);
   }
   .courses__list {
     display: flex;
@@ -128,7 +115,20 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .data-course__icon:last-of-type() {
+
+  .data-course__icon--animation {
+    background-image: url("../assets/images/svg/icon-animation.svg");
+  }
+  .data-course__icon--design {
+    background-image: url("../assets/images/svg/icon-design.svg");
+  }
+  .data-course__icon--photography {
+    background-image: url("../assets/images/svg/icon-photography.svg");
+  }
+  .data-course__icon--crypto {
+    background-image: url("../assets/images/svg/icon-crypto.svg");
+  }
+  .data-course__icon--business {
     background-image: url("../assets/images/svg/icon-business.svg");
   }
 
@@ -137,40 +137,36 @@
     flex-direction: column;
     gap: 1rem;
     .data-course__title {
-      font-weight: 800;
-      font-size: 1.25rem;
-      color: variables.$secondary-color;
+      @include mixins.typography(
+        1.25rem,
+        800,
+        normal,
+        variables.$secondary-color
+      );
     }
     .data-course__description {
-      font-size: 1rem;
-      font-weight: 500;
-      color: variables.$paragraph-color;
+      @include mixins.typography(1rem, 500, normal, variables.$paragraph-color);
     }
   }
   .data-course__link {
-    font-size: 1.125rem;
-    font-weight: 700;
-    color: #f74780;
+    @include mixins.typography(1.125rem, 700, normal, #f74780);
   }
 }
 
 // Footer styles
 .footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  @include mixins.box-flex(row, stretch, center, 100%);
   padding: 2.25rem 0rem;
   background-color: variables.$secondary-color;
   .footer__container-data {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
+    @include mixins.box-flex(row, center, space-between, 90%);
     .footer__paragraph {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: variables.$primary-color;
+      @include mixins.typography(
+        1.75rem,
+        800,
+        normal,
+        variables.$primary-color
+      );
     }
     .footer__link {
       background: variables.$second-linear-gradient;
