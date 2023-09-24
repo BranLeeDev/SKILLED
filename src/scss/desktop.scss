@@ -29,7 +29,7 @@
 .link {
   padding: 0.95rem 2rem;
   border-radius: 1.9375rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -38,14 +38,9 @@
   display: flex;
   justify-content: center;
   .header__container-nav {
-    @include mixins.box-flex(row, center, space-between, 90%);
+    @include mixins.box-flex(row, center, space-between, 70%);
     .header__title {
-      @include mixins.typography(
-        1.75rem,
-        800,
-        normal,
-        variables.$secondary-color
-      );
+      @include mixins.typography(2rem, 800, normal, variables.$secondary-color);
     }
     .header__link {
       position: relative;
@@ -59,9 +54,9 @@
 // main styles
 .main {
   @include mixins.box-flex(column, center, flex-start, 100%);
-  gap: 19rem;
+  gap: 30rem;
   .section {
-    width: 90%;
+    width: 70%;
   }
 }
 
@@ -71,13 +66,16 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   .introduction__container-data {
+    position: relative;
+    top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.625rem;
+    gap: 1.8125rem;
+    max-width: 29rem;
     .introduction__title {
       @include mixins.typography(
-        2.5rem,
+        3.5rem,
         800,
         normal,
         variables.$secondary-color
@@ -85,7 +83,7 @@
     }
     .introduction__description {
       @include mixins.typography(
-        1rem,
+        1.125rem,
         500,
         1.625rem,
         variables.$paragraph-color
@@ -94,24 +92,26 @@
     .introduction__link {
       position: relative;
       bottom: 0.125rem;
+      margin-top: 1rem;
       background: variables.$first-linear-gradient;
       color: variables.$primary-color;
     }
   }
   .introduction__figure {
     position: absolute;
-    top: -18rem;
-    right: -23rem;
-    width: 50rem;
-    height: 50rem;
+    z-index: 0;
+    top: -30rem;
+    right: -39rem;
+    width: 80rem;
+    height: 80rem;
   }
 }
 
 // Section courses
 .section__courses {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 3rem;
   .courses__title {
     padding: 3.5rem 1.3125rem 8.6875rem 2rem;
@@ -185,7 +185,7 @@
   padding: 2.25rem 0rem;
   background-color: variables.$secondary-color;
   .footer__container-data {
-    @include mixins.box-flex(row, center, space-between, 90%);
+    @include mixins.box-flex(row, center, space-between, 70%);
     .footer__paragraph {
       @include mixins.typography(
         1.75rem,
