@@ -1,1 +1,1 @@
-import "../scss/mobile.scss";
+import "../scss/styles.scss";
