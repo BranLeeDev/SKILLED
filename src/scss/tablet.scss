@@ -10,17 +10,18 @@
   width: 100%;
   min-height: 20rem;
   height: max-content;
+  overflow-x: hidden;
 }
 
 // Container header and main
 .header-main__container {
   display: flex;
   flex-direction: column;
-  gap: 2.375rem;
+  gap: 7rem;
   width: inherit;
   height: inherit;
-  padding-top: 1rem;
-  padding-bottom: 5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 5.375rem;
   background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
 }
 
@@ -56,14 +57,17 @@
 // main styles
 .main {
   @include mixins.box-flex(column, center, flex-start, 100%);
+  gap: 19rem;
   .section {
-    @include mixins.box-flex(column, flex-start, flex-start, 90%);
+    width: 90%;
   }
 }
 
 // Main introduction styles
 .main__introduction {
-  gap: 1.625rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   .introduction__container-data {
     display: flex;
     flex-direction: column;
@@ -93,16 +97,22 @@
     }
   }
   .introduction__figure {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: -18rem;
+    right: -23rem;
+    width: 50rem;
+    height: 50rem;
   }
 }
 
 // Section courses
 .section__courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 3rem;
   .courses__title {
-    padding: 1.5rem 1.8125rem 2rem 1.75rem;
+    padding: 3.5rem 1.3125rem 8.6875rem 2rem;
     border-radius: 0.625rem;
     background: variables.$first-linear-gradient;
     @include mixins.typography(1.5rem, 800, 2rem, variables.$primary-color);

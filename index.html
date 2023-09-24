@@ -9,6 +9,16 @@
       type="image/png"
       href="/src/assets/images/png/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="/src/scss/mobile.scss"
+      media="screen and (width < 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="/src/scss/tablet.scss"
+      media="screen and (width < 1440px) and (width >= 768px)"
+    />
   </head>
   <body>
     <div class="app">
@@ -21,12 +31,16 @@
         </header>
         <main class="main">
           <section class="section main__introduction">
-            <h2 class="introduction__title">Maximize skill, minimize budget</h2>
-            <p class="introduction__description">
-              Our modern courses across a range of in-demand skills will give
-              you the knowledge you need to live the life you want.
-            </p>
-            <a href="/" class="introduction__link link">Get Started</a>
+            <div class="introduction__container-data">
+              <h2 class="introduction__title">
+                Maximize skill, minimize budget
+              </h2>
+              <p class="introduction__description">
+                Our modern courses across a range of in-demand skills will give
+                you the knowledge you need to live the life you want.
+              </p>
+              <a href="/" class="introduction__link link">Get Started</a>
+            </div>
             <figure class="introduction__figure">
               <picture class="introduction__picture">
                 <source
@@ -49,83 +63,67 @@
           </section>
           <section class="section section__courses">
             <h2 class="courses__title">Check out our most popular courses!</h2>
-            <ul class="courses__list">
-              <li class="courses__item">
-                <article class="courses__data-course">
-                  <span
-                    class="data-course__icon data-course__icon--animation"
-                  ></span>
-                  <div class="data-course__container-texts">
-                    <h3 class="data-course__title">Animation</h3>
-                    <p class="data-course__description">
-                      Learn the latest animation techniques to create stunning
-                      motion design and captivate your audience.
-                    </p>
-                  </div>
-                  <a href="/" class="data-course__link">Get Started</a>
-                </article>
-              </li>
-              <li class="courses__item">
-                <article class="courses__data-course">
-                  <span
-                    class="data-course__icon data-course__icon--design"
-                  ></span>
-                  <div class="data-course__container-texts">
-                    <h3 class="data-course__title">Design</h3>
-                    <p class="data-course__description">
-                      Create beautiful, usable interfaces to help shape the
-                      future of how the web looks.
-                    </p>
-                  </div>
-                  <a href="/" class="data-course__link">Get Started</a>
-                </article>
-              </li>
-              <li class="courses__item">
-                <article class="courses__data-course">
-                  <span
-                    class="data-course__icon data-course__icon--photography"
-                  ></span>
-                  <div class="data-course__container-texts">
-                    <h3 class="data-course__title">Photography</h3>
-                    <p class="data-course__description">
-                      Explore critical fundamentals like lighting, composition,
-                      and focus to capture exceptional photos.
-                    </p>
-                  </div>
-                  <a href="/" class="data-course__link">Get Started</a>
-                </article>
-              </li>
-              <li class="courses__item">
-                <article class="courses__data-course">
-                  <span
-                    class="data-course__icon data-course__icon--crypto"
-                  ></span>
-                  <div class="data-course__container-texts">
-                    <h3 class="data-course__title">Crypto</h3>
-                    <p class="data-course__description">
-                      All you need to know to get started investing in crypto.
-                      Go from beginner to advanced with this 54 hour course.
-                    </p>
-                  </div>
-                  <a href="/" class="data-course__link">Get Started</a>
-                </article>
-              </li>
-              <li class="courses__item">
-                <article class="courses__data-course">
-                  <span
-                    class="data-course__icon data-course__icon--business"
-                  ></span>
-                  <div class="data-course__container-texts">
-                    <h3 class="data-course__title">Business</h3>
-                    <p class="data-course__description">
-                      A step-by-step playbook to help you start, scale, and
-                      sustain your business without outside investment.
-                    </p>
-                  </div>
-                  <a href="/" class="data-course__link">Get Started</a>
-                </article>
-              </li>
-            </ul>
+            <article class="courses__data-course">
+              <span
+                class="data-course__icon data-course__icon--animation"
+              ></span>
+              <div class="data-course__container-texts">
+                <h3 class="data-course__title">Animation</h3>
+                <p class="data-course__description">
+                  Learn the latest animation techniques to create stunning
+                  motion design and captivate your audience.
+                </p>
+              </div>
+              <a href="/" class="data-course__link">Get Started</a>
+            </article>
+            <article class="courses__data-course">
+              <span class="data-course__icon data-course__icon--design"></span>
+              <div class="data-course__container-texts">
+                <h3 class="data-course__title">Design</h3>
+                <p class="data-course__description">
+                  Create beautiful, usable interfaces to help shape the future
+                  of how the web looks.
+                </p>
+              </div>
+              <a href="/" class="data-course__link">Get Started</a>
+            </article>
+            <article class="courses__data-course">
+              <span
+                class="data-course__icon data-course__icon--photography"
+              ></span>
+              <div class="data-course__container-texts">
+                <h3 class="data-course__title">Photography</h3>
+                <p class="data-course__description">
+                  Explore critical fundamentals like lighting, composition, and
+                  focus to capture exceptional photos.
+                </p>
+              </div>
+              <a href="/" class="data-course__link">Get Started</a>
+            </article>
+            <article class="courses__data-course">
+              <span class="data-course__icon data-course__icon--crypto"></span>
+              <div class="data-course__container-texts">
+                <h3 class="data-course__title">Crypto</h3>
+                <p class="data-course__description">
+                  All you need to know to get started investing in crypto. Go
+                  from beginner to advanced with this 54 hour course.
+                </p>
+              </div>
+              <a href="/" class="data-course__link">Get Started</a>
+            </article>
+            <article class="courses__data-course">
+              <span
+                class="data-course__icon data-course__icon--business"
+              ></span>
+              <div class="data-course__container-texts">
+                <h3 class="data-course__title">Business</h3>
+                <p class="data-course__description">
+                  A step-by-step playbook to help you start, scale, and sustain
+                  your business without outside investment.
+                </p>
+              </div>
+              <a href="/" class="data-course__link">Get Started</a>
+            </article>
           </section>
         </main>
       </div>
